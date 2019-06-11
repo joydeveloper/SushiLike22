@@ -140,10 +140,13 @@ and (-webkit-min-device-pixel-ratio : 4)
 and (-webkit-device-pixel-ratio : 4)
 and (orientation: portrait) {
     .logo{
-        width:50%;
-        height: 50% ;
+        visibility: hidden;
     }
 
 }
-
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+    .logo{
+       visibility: hidden;
+    }
+}
 
