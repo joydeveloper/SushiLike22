@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData">
+  <component name="PublishConfigData" uploadOnCheckin="1dfa3c18-72be-4234-bd38-c4d966531aff">
     <serverData>
       <paths name="regru">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
@@ -17,5 +17,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="regru" />
   </component>
 </project>
