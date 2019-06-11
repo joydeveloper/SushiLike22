@@ -134,8 +134,8 @@
 
 }
 @media screen
-and (device-width: 360px)
-and (device-height: 640px)
+and (device-width: 1440px)
+and (device-height: 2560px)
 and (-webkit-min-device-pixel-ratio : 4)
 and (-webkit-device-pixel-ratio : 4)
 and (orientation: portrait) {
