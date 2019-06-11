@@ -1,0 +1,254 @@
+[
+  {
+    "number": 1,
+    "name": "лава",
+    "price": 29,
+    "count": 1,
+    "weight": 30
+  },
+  {
+    "number": 2,
+    "name": "президент",
+    "price": 24,
+    "count": 1,
+    "weight": 30
+  },
+  {
+    "number": 3,
+    "name": "вулкан",
+    "price": 33,
+    "count": 1,
+    "weight": 30
+  },
+  {
+    "number": 4,
+    "name": "фурай",
+    "price": 180,
+    "count": 6,
+    "weight": null
+  },
+  {
+    "number": 5,
+    "name": "мак",
+    "price": 12,
+    "count": 8,
+    "weight": null
+  },
+  {
+    "number": 6,
+    "name": "фуджияма",
+    "price": 240,
+    "count": 6,
+    "weight": null
+  },
+  {
+    "number": 7,
+    "name": "бостон",
+    "price": 27,
+    "count": 1,
+    "weight": 28
+  },
+  {
+    "number": 8,
+    "name": "унаги маки",
+    "price": 28,
+    "count": 1,
+    "weight": null
+  },
+  {
+    "number": 9,
+    "name": "веста",
+    "price": 615,
+    "count": 28,
+    "weight": 736
+  },
+  {
+    "number": 10,
+    "name": "альфа",
+    "price": 499,
+    "count": 34,
+    "weight": null
+  },
+  {
+    "number": 11,
+    "name": "прайм",
+    "price": 699,
+    "count": 32,
+    "weight": null
+  },
+  {
+    "number": 12,
+    "name": "гранд пати",
+    "price": 1899,
+    "count": null,
+    "weight": 1980
+  },
+  {
+    "number": 13,
+    "name": "унагифурай маки",
+    "price": 180,
+    "count": 6,
+    "weight": null
+  },
+  {
+    "number": 14,
+    "name": "такеши",
+    "price": 26,
+    "count": 1,
+    "weight": 25
+  },
+  {
+    "number": 15,
+    "name": "горячий",
+    "price": 799,
+    "count": 38,
+    "weight": null
+  },
+  {
+    "number": 16,
+    "name": "сэт",
+    "price": 849,
+    "count": null,
+    "weight": null
+  },
+  {
+    "number": 17,
+    "name": "сяке маки",
+    "price": 24,
+    "count": 1,
+    "weight": 20
+  },
+  {
+    "number": 18,
+    "name": "дракон",
+    "price": 30,
+    "count": 1,
+    "weight": null
+  },
+  {
+    "number": 19,
+    "name": "сяке шурме фурай маки",
+    "price": 180,
+    "count": null,
+    "weight": null
+  },
+  {
+    "number": 20,
+    "name": "восходящее солнце",
+    "price": 28,
+    "count": 1,
+    "weight": 27
+  },
+  {
+    "number": 21,
+    "name": "бонито",
+    "price": 28,
+    "count": 1,
+    "weight": 24
+  },
+  {
+    "number": 22,
+    "name": "дуэт",
+    "price": 1099,
+    "count": null,
+    "weight": null
+  },
+  {
+    "number": 23,
+    "name": "бета",
+    "price": 849,
+    "count": 1,
+    "weight": null
+  },
+  {
+    "number": 24,
+    "name": "эби темпура",
+    "price": 180,
+    "count": null,
+    "weight": null
+  },
+  {
+    "number": 25,
+    "name": "черный самурай",
+    "price": 30,
+    "count": 1,
+    "weight": 28
+  },
+  {
+    "number": 26,
+    "name": "омега",
+    "price": 549,
+    "count": null,
+    "weight": null
+  },
+  {
+    "number": 27,
+    "name": "де люкс",
+    "price": 589,
+    "count": null,
+    "weight": 592
+  },
+  {
+    "number": 28,
+    "name": "биг компани",
+    "price": 1399,
+    "count": null,
+    "weight": 1516
+  },
+  {
+    "number": 29,
+    "name": "яки ногано",
+    "price": 240,
+    "count": null,
+    "weight": null
+  },
+  {
+    "number": 30,
+    "name": "вассабико",
+    "price": 26,
+    "count": 1,
+    "weight": null
+  },
+  {
+    "number": 31,
+    "name": "I лава you",
+    "price": 549,
+    "count": null,
+    "weight": 824
+  },
+  {
+    "number": 32,
+    "name": "филадельфия",
+    "price": 39,
+    "count": null,
+    "weight": 29
+  },
+  {
+    "number": 33,
+    "name": "дабл",
+    "price": 699,
+    "count": null,
+    "weight": null
+  },
+  {
+    "number": 34,
+    "name": "унаги филадельфия",
+    "price": 41,
+    "count": null,
+    "weight": 32
+  },
+  {
+    "number": 35,
+    "name": "такара",
+    "price": 26,
+    "count": null,
+    "weight": null
+  },
+  {
+    "number": 36,
+    "name": "красное и черное",
+    "price": 699,
+    "count": null,
+    "weight": 864
+  }
+]
