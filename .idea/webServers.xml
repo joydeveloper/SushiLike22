@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="00a114d4-ca08-430c-aee6-b04979e74cdb" name="regru" url="http://37.140.192.44">
+        <fileTransfer host="37.140.192.44" port="21" rootFolder="/www/sushilike22.ru">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
