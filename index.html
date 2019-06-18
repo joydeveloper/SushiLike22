@@ -20,7 +20,13 @@
     <script type="text/javascript" src="content/convertcsv.json"></script>
     <script type="text/javascript" src="js/utilites.js"></script>
     <style>
+        .btn-group button{
+            background-color:#371a34;
 
+        }
+        .btn-group button:hover{
+            background-color:lightseagreen;
+        }
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -78,6 +84,10 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <button type="button" class="btn btn-warning">
+                Мой заказ <span class="badge badge-light">0</span>
+                <span class="sr-only">unread messages</span>
+            </button>
         </div>
     </div>
 </header>
@@ -94,9 +104,9 @@
             <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#d4d84c"/></svg>
             <div class="container">
                 <div class="carousel-caption text-left">
-                    <h1>Парти сеты!</h1>
-                    <p>Решили потусить и не знаете,чем угостить гостей?</p>
-                    <p>Смотрите наши мега сеты для больших компаний!</p>
+                    <h1 style="color:#371a34">Пати сеты!</h1>
+                    <p style="color:#371a34">Решили потусить и не знаете чем угостить гостей?</p>
+                    <p style="color:#371a34">Смотрите наши мега сеты для больших компаний!</p>
                     <p><a class="btn btn-lg btn-danger" href="#" role="button">Закажите сегодня.</a></p>
                 </div>
             </div>
@@ -144,7 +154,6 @@
             }
             rawFile.send(null);
         }
-
         //usage:
         readTextFile("content/convertcsv.json", function(text){
             let data = JSON.parse(text);
@@ -162,8 +171,10 @@
                 let prcardbody=document.createElement("div");
                 prcardbody.id="prcardbody"+element.number;
                 prcardbody.className="cardbody";
-                let pcardbody=document.createElement("P");
-                pcardbody.innerText="Описание";
+                prcardbody.padding="10px";
+                let pcardbody=document.createElement("h4");
+                pcardbody.className="text-muted alert alert-warning";
+                pcardbody.innerText=(element.name).charAt(0).toUpperCase() + (element.name).substr(1);
                 let prflex=document.createElement("div");
                 prflex.className="d-flex justify-content-between align-items-center";
                 prflex.id="prflex"+element.number;
@@ -171,19 +182,19 @@
                 prbtngroup.className="btn-group";
                 prbtngroup.id="prbtngroup"+element.number;
                 let orderbutton=document.createElement("button");
-                orderbutton.className="btn btn-sm btn-outline-secondary";
+                orderbutton.className="btn btn-secondary";
                 orderbutton.type="button";
                 orderbutton.id="orderbutton"+element.number;
                 orderbutton.innerText="Заказать";
                 let infobutton=document.createElement("button");
-                infobutton.className="btn btn-sm btn-outline-secondary";
+                infobutton.className="btn btn-secondary";
                 infobutton.type="button";
                 infobutton.id="infobutton"+element.number;
                 infobutton.innerText="Инфо";
-                let priceval=document.createElement("small");
-                priceval.className="text-muted";
+                let priceval=document.createElement("h5");
+                priceval.className="text-muted alert alert-danger";
                 priceval.id="priceval"+element.number;
-                priceval.innerText=element.price+' рублей';
+                priceval.innerText=element.price+' руб';
                 document.getElementById("productcards").appendChild(prcard);
                 document.getElementById("prcard"+element.number).appendChild(prcardshadow);
                 document.getElementById("prcardshadow"+element.number).appendChild(prcardimg);
@@ -195,9 +206,7 @@
                 document.getElementById("prbtngroup"+element.number).appendChild(infobutton);
                 document.getElementById("prflex"+element.number).appendChild(priceval);
             });
-
         });
-
     </script>
 <!--    Витрина-->
     <div class="album py-5 bg-light">
@@ -210,7 +219,7 @@
 </section>
 <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
     <div class="container text-center">
-        <strong>2019&copy; СушилЛайк22</strong>
+        <strong>2019&copy; СушиЛайк22</strong>
         <hr>
 
         <small>Разработка сайта Feziko</small>
