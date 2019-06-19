@@ -142,6 +142,7 @@ only screen and (                min-resolution: 3.5dppx) {
     .logo {
       border: solid blue;
         width: 200px;
+        margin-bottom: 300px;
     }
     #navbarHeader{
         max-height: 500px;
