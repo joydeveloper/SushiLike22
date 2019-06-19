@@ -143,6 +143,6 @@ only screen and (                min-resolution: 3.5dppx) {
         height: 25% ;
     }
     #navbarHeader{
-        min-height: 600px;
+        man-height: 200px;
     }
 }
