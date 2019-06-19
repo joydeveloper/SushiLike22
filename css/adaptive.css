@@ -142,4 +142,7 @@ only screen and (                min-resolution: 3.5dppx) {
     .logo {
         height: 25% ;
     }
+    #navbarHeader{
+        min-height: content-box;
+    }
 }
