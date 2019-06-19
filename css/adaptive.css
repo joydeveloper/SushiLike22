@@ -140,4 +140,7 @@ only screen and (                min-resolution: 3.5dppx) {
     .logo {
         visibility: hidden;
     }
+    #navbarHeader{
+    max-height: content-box;
+    }
 }
