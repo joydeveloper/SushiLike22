@@ -141,6 +141,6 @@ only screen and (                min-resolution: 3.5dppx) {
         visibility: hidden;
     }
     #navbarHeader{
-    max-height: 200px;
+    height: 100px;
     }
 }
