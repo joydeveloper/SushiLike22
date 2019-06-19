@@ -140,9 +140,9 @@ only screen and (        min-device-pixel-ratio: 3.5),
 only screen and (                min-resolution: 577dpi),
 only screen and (                min-resolution: 3.5dppx) {
     .logo {
-       visibility: hidden;
+       padding-bottom: 200px;
     }
     #navbarHeader{
-        man-height: 200px;
+        max-height: 200px;
     }
 }
