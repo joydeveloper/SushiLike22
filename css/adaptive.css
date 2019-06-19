@@ -141,7 +141,7 @@ only screen and (                min-resolution: 577dpi),
 only screen and (                min-resolution: 3.5dppx) {
     .logo {
       width: 10%;
-        height: 35%;
+        height: 350%;
     }
     #navbarHeader{
         max-height: 500px;
