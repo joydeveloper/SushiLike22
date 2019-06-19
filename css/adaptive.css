@@ -126,7 +126,7 @@
 /*Desktop*/
 @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (orientation: landscape) {
     .logo {
-       max-height:100px;
+        height: 11% ;
     }
 
 }
@@ -141,6 +141,6 @@ only screen and (                min-resolution: 577dpi),
 only screen and (                min-resolution: 3.5dppx) {
     .logo {
 
-        height: 100px;
+        height: 7% ;
     }
 }
