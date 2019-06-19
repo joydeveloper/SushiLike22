@@ -1,4 +1,10 @@
 /*Shared */
+@media screen {
+    .logo{
+        width: 68% ;
+        height: 5% ;
+    }
+}
 @media only screen and (min-device-width: 360px) and (max-device-width: 873px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape){
     .logo{
         width: 68% ;
