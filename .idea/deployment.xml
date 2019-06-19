@@ -2,7 +2,21 @@
 <project version="4">
   <component name="PublishConfigData" serverName="regru" uploadOnCheckin="00a114d4-ca08-430c-aee6-b04979e74cdb">
     <serverData>
+      <paths name="MyServer">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="regru">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="regru (project level)">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
