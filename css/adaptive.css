@@ -43,15 +43,18 @@
         height: 68% ;
     }
 }
-@media only screen and (min-device-width: 667px) and (max-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+/*@media only screen and (min-device-width: 667px) and (max-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
     #logo {
         width: 12em;
         height: 7em;
         margin-top: 5%;
     }
 
-
-/
+    .sani {
+        top: 40%;
+        left: -30%;
+    }
+}*/
 /*Iphone X*/
 @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
     .logo{
@@ -94,7 +97,7 @@
 }*/
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1.5) {
     .logo{
-       width:80%;
+        width:80%;
         height: 80% ;
     }
 }
@@ -115,15 +118,13 @@
 
 @media only screen and (min-device-width: 834px) and (max-device-width: 834px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
     .logo{
-        width:75%;
-        height: 80% ;
+        visibility: hidden;
     }
 }
 /*Desktop*/
 @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (orientation: landscape) {
     .logo{
-        width:75%;
-        height: 80% ;
+        visibility: hidden;
     }
 
 }
@@ -137,6 +138,6 @@ only screen and (        min-device-pixel-ratio: 3.5),
 only screen and (                min-resolution: 577dpi),
 only screen and (                min-resolution: 3.5dppx) {
     .logo {
-       visibility: hidden;
+        visibility: hidden;
     }
 }
