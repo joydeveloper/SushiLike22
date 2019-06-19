@@ -126,8 +126,7 @@
 /*Desktop*/
 @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (orientation: landscape) {
     .logo {
-        visibility: hidden;
-        height: 100px;
+       max-height:100px;
     }
 
 }
