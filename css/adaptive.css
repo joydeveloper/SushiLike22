@@ -1,10 +1,5 @@
 /*Shared */
-@media screen {
-    .logo{
-        width: 68% ;
-        height: 5% ;
-    }
-}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 873px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape){
     .logo{
         width: 68% ;
@@ -127,10 +122,6 @@
         visibility: hidden;
         height: 100px;
     }
-    #navbarHeader{
-        visibility: hidden;
-    }
-}
 }
 /*Desktop*/
 @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (orientation: landscape) {
@@ -138,10 +129,7 @@
         visibility: hidden;
         height: 100px;
     }
-    #navbarHeader{
-        visibility: hidden;
-    }
-}
+
 }
 
 
@@ -153,10 +141,7 @@ only screen and (        min-device-pixel-ratio: 3.5),
 only screen and (                min-resolution: 577dpi),
 only screen and (                min-resolution: 3.5dppx) {
     .logo {
-        visibility: hidden;
+
         height: 100px;
-    }
-    #navbarHeader{
-        visibility: hidden;
     }
 }
