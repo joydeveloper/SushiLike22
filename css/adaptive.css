@@ -140,7 +140,7 @@ only screen and (        min-device-pixel-ratio: 3.5),
 only screen and (                min-resolution: 577dpi),
 only screen and (                min-resolution: 3.5dppx) {
     .logo {
-      width: 10%;
+      width: 100%;
         height: 350%;
     }
     #navbarHeader{
