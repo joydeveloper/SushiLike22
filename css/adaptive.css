@@ -139,8 +139,9 @@ only screen and (                min-resolution: 577dpi),
 only screen and (                min-resolution: 3.5dppx) {
     .logo {
         visibility: hidden;
+        height: 100px;
     }
     #navbarHeader{
-    height: 100px;
+
     }
 }
