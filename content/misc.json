@@ -1,0 +1,22 @@
+[
+ {
+   "number": 1,
+   "name": "палочки",
+   "price": 2
+ },
+ {
+   "number": 2,
+   "name": "соус",
+   "price": 10
+ },
+ {
+   "number": 3,
+   "name": "васаби",
+   "price": 10
+ },
+ {
+   "number": 4,
+   "name": "имбирь",
+   "price": 10
+ }
+]

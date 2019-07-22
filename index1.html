@@ -1,0 +1,308 @@
+﻿<html lang="ru">
+<head>
+    <!--  <link rel="manifest" href="manifest.json">-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SushuLike22</title>
+    <meta content="Роллы,суши,лайки,лайк,барнаул,доставка" name="keywords">
+    <meta content="Вкусные суши и роллы с доставкой в Барнауле" name="description">
+    <link rel="shortcut icon" href="images/shared/favicon.ico" type="image/x-icon">
+    <meta name="theme-color" content="#fff">
+    <!--    Стили-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/adaptive.css" rel="stylesheet">
+    <!--    Скрипты-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="content/convertcsv.json"></script>
+    <script type="text/javascript" src="js/utilites.js"></script>
+    <script type="text/javascript" src="js/order.js"></script>
+    <style>
+        .btn-group button {
+            background-color: #371a34;
+        }
+
+            .btn-group button:hover {
+                background-color: lightseagreen;
+            }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .logo {
+            width: 100%;
+            height: 11%;
+            background-repeat: no-repeat;
+        }
+
+        .product_img {
+            width: 256px;
+            height: 170px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">О нас</h4>
+                        <p class="text-muted">Условия доставки</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Контакты</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Телефон</a></li>
+                            <li><a href="#" class="text-white">Адрес</a></li>
+                            <li><a href="#" class="text-white">Инстаграмм</a></li>
+                            <li><a href="#" class="text-white">Вконтакте</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <img class="logo" src="images/shared/logo.png">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button onclick="focusMethod()" style="position:fixed;z-index:1000;left:72%" type="button" class="btn btn-warning" data-toggle="collapse" data-target="#collapsecart" aria-expanded="false" aria-controls="collapseExample">
+                    В заказе <span id="ordercount" class="badge badge-light">0</span>
+                    <span class="sr-only">Мой заказ</span>
+                </button>
+
+            </div>
+        </div>
+    </header>
+
+    <!--Слайдер-->
+    <div id="myCarousel" class="carousel slide pointer-event" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#d4d84c"></rect></svg>
+                <div class="container">
+                    <div class="carousel-caption text-left">
+                        <h1 style="color:#371a34">Пати сеты!</h1>
+                        <p style="color:#371a34">Решили потусить и не знаете чем угостить гостей?</p>
+                        <p style="color:#371a34">Смотрите наши мега сеты для больших компаний!</p>
+                        <p><a class="btn btn-lg btn-danger" href="#" role="button">Закажите сегодня.</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#371a34"></rect></svg>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Попробуйте наши роллы</h1>
+                        <p>У нас большой выбор роллов,многие из них вы еще не пробовали.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Попробывать.</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#4c65d8"></rect></svg>
+                <div class="container">
+                    <div class="carousel-caption text-right">
+                        <h1>Скидки и подарки в честь открытия!</h1>1
+                        <p><a class="btn btn-lg btn-success" href="#" role="button">Узнать больше.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Следующий</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Предыдущий</span>
+        </a>
+    </div>
+
+    <section>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button onclick="filterall()" type="button" class="btn btn-secondary">Всё</button>
+            <button onclick="filterroll()" type="button" class="btn btn-secondary">Роллы</button>
+            <button onclick="filterset()" type="button" class="btn btn-secondary">Сеты</button>
+            <button onclick="filtermisc()" type="button" class="btn btn-secondary">Дополнительно</button>
+        </div>
+        <script>
+            
+
+        </script>
+        <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="productPrice modal-title" id="infoModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 id="infofield"></h6>
+                        <p id="infodata"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть.</button>
+                        <button id="modalorderbutton" type="button" class="btn btn-primary">Добавить в заказ.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--    Витрина-->
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <h1 align="center">Роллы</h1>
+                <div id="rollcards" class="row">
+
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" id="rcard1">
+                        <div class="card mb-4 shadow-sm" id="rcardshadow1">
+                            <img class="bd-placeholder-img card-img-top" src="images/products/1.png" id="rcardimg1"><div id="rcardbody1" class="cardbody">
+                                <h4 class="text-muted alert alert-warning productTitle">Лава</h4><div class="d-flex justify-content-between align-items-center" id="rflex1">
+                                    <div class="btn-group" id="rbtngroup1">
+                                        <button class=" buttonAdd" type="button" id="orderbutton1">+</button>
+                                        <button class=" buttonInf" type="button" id="infobutton1" data-toggle="modal" data-target="#infoModal">i</button>
+                                    </div>
+                                    <h5 class="productPrice text-muted alert alert-danger" id="rpriceval1">29 руб</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" id="rcard2">
+                        <div class="card mb-4 shadow-sm" id="rcardshadow2">
+                            <img class="bd-placeholder-img card-img-top" src="images/products/2.png" id="rcardimg2">
+                            <div id="rcardbody2" class="cardbody">
+                                <h4 class="text-muted alert alert-warning productTitle">Президент</h4>
+                                <div class="d-flex justify-content-between align-items-center" id="rflex2">
+                                  <div class="btn-group" id="rbtngroup1">
+                                      <button class=" buttonAdd" type="button" id="orderbutton1">+</button>
+                                      <button class=" buttonInf" type="button" id="infobutton1" data-toggle="modal" data-target="#infoModal">i</button>
+                                  </div>
+                                  <h5 class="productPrice text-muted alert alert-danger" id="rpriceval1">29 руб</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" id="rcard3">
+                        <div class="card mb-4 shadow-sm" id="rcardshadow3">
+                            <img class="bd-placeholder-img card-img-top" src="images/products/3.png" id="rcardimg3">
+                            <div id="rcardbody3" class="cardbody">
+                                <h4 class="text-muted alert alert-warning productTitle">Вулкан</h4>
+                                <div class="d-flex justify-content-between align-items-center" id="rflex3">
+                                  <div class="btn-group" id="rbtngroup1">
+                                      <button class=" buttonAdd" type="button" id="orderbutton1">+</button>
+                                      <button class=" buttonInf" type="button" id="infobutton1" data-toggle="modal" data-target="#infoModal">i</button>
+                                  </div>
+                                  <h5 class="productPrice text-muted alert alert-danger" id="rpriceval1">29 руб</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" id="rcard4">
+                        <div class="card mb-4 shadow-sm" id="rcardshadow4">
+                            <img class="bd-placeholder-img card-img-top" src="images/products/4.png" id="rcardimg4">
+                            <div id="rcardbody4" class="cardbody">
+                                <h4 class="text-muted alert alert-warning productTitle">Фурай</h4><div class="d-flex justify-content-between align-items-center" id="rflex4">
+                                  <div class="btn-group" id="rbtngroup1">
+                                      <button class=" buttonAdd" type="button" id="orderbutton1">+</button>
+                                      <button class=" buttonInf" type="button" id="infobutton1" data-toggle="modal" data-target="#infoModal">i</button>
+                                  </div>
+                                  <h5 class="productPrice text-muted alert alert-danger" id="rpriceval1">29 руб</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" id="rcard5">
+                        <div class="card mb-4 shadow-sm" id="rcardshadow5">
+                            <img class="bd-placeholder-img card-img-top" src="images/products/5.png" id="rcardimg5"><div id="rcardbody5" class="cardbody">
+                                <h4 class="text-muted alert alert-warning productTitle">Мак</h4><div class="d-flex justify-content-between align-items-center" id="rflex5">
+                                  <div class="btn-group" id="rbtngroup1">
+                                      <button class=" buttonAdd" type="button" id="orderbutton1">+</button>
+                                      <button class=" buttonInf" type="button" id="infobutton1" data-toggle="modal" data-target="#infoModal">i</button>
+                                  </div>
+                                  <h5 class="productPrice text-muted alert alert-danger" id="rpriceval1">29 руб</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6" id="rcard6">
+                        <div class="card mb-4 shadow-sm" id="rcardshadow6">
+                            <img class="bd-placeholder-img card-img-top" src="images/products/6.png" id="rcardimg6">
+                            <div id="rcardbody6" class="cardbody">
+                                <h4 class="text-muted alert alert-warning productTitle">Фуджияма</h4>
+                                <div class="d-flex justify-content-between align-items-center" id="rflex6">
+                                  <div class="btn-group" id="rbtngroup1">
+                                      <button class=" buttonAdd" type="button" id="orderbutton1">+</button>
+                                      <button class=" buttonInf" type="button" id="infobutton1" data-toggle="modal" data-target="#infoModal">i</button>
+                                  </div>
+                                  <h5 class="productPrice text-muted alert alert-danger" id="rpriceval1">29 руб</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+        </div>
+        <div class="collapse" id="collapsecart">
+            <div id="cartview" class="card card-body">
+                <table border="1">
+                    <caption>Мой заказ</caption>
+                    <tbody>
+                        <tr>
+                            <th>Название</th>
+                            <th>Количество</th>
+                            <th>Цена</th>
+                        </tr>
+                        <tr>
+                            <td>Суши</td>
+                            <td>2</td>
+                            <td>360</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p></p>
+
+        </div>
+        <button type="button" class="buttonAdd" id="myButton">Заказать!</button>
+    </section>
+    <p id="myTextField"></p>
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <strong>2019© СушиЛайк22</strong>
+            <hr>
+
+            <small>Разработка сайта Feziko</small>
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

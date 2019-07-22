@@ -1,4 +1,4 @@
-
+﻿
 <html lang="ru">
 <head>
     <!--  <link rel="manifest" href="manifest.json">-->
@@ -9,24 +9,52 @@
     <meta content="Вкусные суши и роллы с доставкой в Барнауле" name="description" />
     <link rel="shortcut icon" href="images/shared/favicon.ico" type="image/x-icon">
     <meta name="theme-color" content="#fff" />
-<!--    Стили-->
+    <!--    Стили-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="css/carousel.css" rel="stylesheet">
     <link href="css/adaptive.css" rel="stylesheet">
-<!--    Скрипты-->
+    <link href="css/album.css" rel="stylesheet">
+    <!--    Скрипты-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="content/convertcsv.json"></script>
     <script type="text/javascript" src="js/utilites.js"></script>
+    <script type="text/javascript" src="js/order.js"></script>
     <style>
-        .btn-group button{
-            background-color:#371a34;
+        .windowwrapper {
+            background-image: url('images/shared/mainbg.jpg');
+            background-repeat: no-repeat;
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
+        }
 
+        .bgsideleft {
+            background-image: url('images/shared/bgside.jpg');
+            background-repeat: no-repeat;
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
         }
-        .btn-group button:hover{
-            background-color:lightseagreen;
+
+        .bgsideright {
+            background-image: url('images/shared/bgside.jpg');
+            transform: scale(1, -1);
+            background-repeat: no-repeat;
+            object-fit: fill;
+            width: 100%;
+            height: 100%;
         }
+
+        .btn-group button {
+            background-color: #371a34;
+        }
+
+            .btn-group button:hover {
+                background-color: lightseagreen;
+            }
+
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -42,190 +70,455 @@
                 font-size: 3.5rem;
             }
         }
-        .logo
-        {
-          width: 100%;
+
+        .logo {
+            width: 100%;
             height: 11%;
             background-repeat: no-repeat;
         }
-        .product_img{
-            width:256px;
+
+        .product_img {
+            width: 256px;
             height: 170px;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <div class="collapse bg-dark" id="navbarHeader">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-8 col-md-7 py-4">
-                    <h4 class="text-white">О нас</h4>
-                    <p class="text-muted">Условия доставки</p>
-                </div>
-                <div class="col-sm-4 offset-md-1 py-4">
-                    <h4 class="text-white">Контакты</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white">Телефон</a></li>
-                        <li><a href="#" class="text-white">Адрес</a></li>
-                        <li><a href="#" class="text-white">Инстаграмм</a></li>
-                        <li><a href="#" class="text-white">Вконтакте</a></li>
-                    </ul>
+        <header>
+            <div class="collapse bg-dark" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4 class="text-white">О нас</h4>
+                            <p class="text-muted">Условия доставки</p>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h4 class="text-white">Контакты</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-white">Телефон</a></li>
+                                <li><a href="#" class="text-white">Адрес</a></li>
+                                <li><a href="#" class="text-white">Инстаграмм</a></li>
+                                <li><a href="#" class="text-white">Вконтакте</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-between">
-            <a href="#" class="navbar-brand d-flex align-items-center">
-              <img class="logo" src="images/shared/logo.png">
+            <div class="navbar  bg-light">
+                <div class="container d-flex justify-content-between">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <img class="logo" src="images/shared/logo.png">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <button onclick="focusMethod()" style="position:fixed;z-index:1000;left:72%" type="button" class="btn btn-warning" data-toggle="collapse" data-target="#collapsecart" aria-expanded="false" aria-controls="collapseExample">
+                        В заказе <span id="ordercount" class="badge badge-light">0</span>
+                        <span class="sr-only">Мой заказ</span>
+                    </button>
 
+                </div>
+            </div>
+        </header>
+
+        <!--Слайдер-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#d4d84c" /></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h1 style="color:#371a34">Пати сеты!</h1>
+                            <p style="color:#371a34">Решили потусить и не знаете чем угостить гостей?</p>
+                            <p style="color:#371a34">Смотрите наши мега сеты для больших компаний!</p>
+                            <p><a class="btn btn-lg btn-danger" href="#" role="button">Закажите сегодня.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#371a34" /></svg>
+                    <div class="container">
+                        <div class="carousel-caption">
+                            <h1>Попробуйте наши роллы</h1>
+                            <p>У нас большой выбор роллов,многие из них вы еще не пробовали.</p>
+                            <p><a class="btn btn-lg btn-primary" href="#" role="button">Попробывать.</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#4c65d8" /></svg>
+                    <div class="container">
+                        <div class="carousel-caption text-right">
+                            <h1>Скидки и подарки в честь открытия!</h1>1
+                            <p><a class="btn btn-lg btn-success" href="#" role="button">Узнать больше.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Следующий</span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <button type="button" class="btn btn-warning">
-                Мой заказ <span class="badge badge-light">0</span>
-                <span class="sr-only">unread messages</span>
-            </button>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Предыдущий</span>
+            </a>
         </div>
-    </div>
-</header>
 
-<!--Слайдер-->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#d4d84c"/></svg>
-            <div class="container">
-                <div class="carousel-caption text-left">
-                    <h1 style="color:#371a34">Пати сеты!</h1>
-                    <p style="color:#371a34">Решили потусить и не знаете чем угостить гостей?</p>
-                    <p style="color:#371a34">Смотрите наши мега сеты для больших компаний!</p>
-                    <p><a class="btn btn-lg btn-danger" href="#" role="button">Закажите сегодня.</a></p>
-                </div>
+        <section>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button onclick="filterall()" type="button" class="btn btn-secondary">Всё</button>
+                <button onclick="filterroll()" type="button" class="btn btn-secondary">Роллы</button>
+                <button onclick="filterset()" type="button" class="btn btn-secondary">Сеты</button>
+                <button onclick="filtermisc()" type="button" class="btn btn-secondary">Дополнительно</button>
             </div>
-        </div>
-        <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#371a34"/></svg>
-            <div class="container">
-                <div class="carousel-caption">
-                    <h1>Попробуйте наши роллы</h1>
-                    <p>У нас большой выбор роллов,многие из них вы еще не пробывали.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Попробывать.</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#4c65d8"/></svg>
-            <div class="container">
-                <div class="carousel-caption text-right">
-                    <h1>Скидки и подарки в честь открытия!</h1>
-
-                    <p><a class="btn btn-lg btn-success" href="#" role="button">Узнать больше.</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Следующий</span>
-    </a>
-    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Предыдущий</span>
-    </a>
-</div>
-<section>
-    <script>
-        function readTextFile(file, callback) {
-            var rawFile = new XMLHttpRequest();
-            rawFile.overrideMimeType("application/json");
-            rawFile.open("GET", file, true);
-            rawFile.onreadystatechange = function() {
-                if (rawFile.readyState === 4 && rawFile.status == "200") {
-                    callback(rawFile.responseText);
+            <script>
+                let myorder = new Orders();
+                function readTextFile(file, callback) {
+                    var rawFile = new XMLHttpRequest();
+                    rawFile.overrideMimeType("application/json");
+                    rawFile.open("GET", file, true);
+                    rawFile.onreadystatechange = function () {
+                        if (rawFile.readyState === 4 && rawFile.status == "200") {
+                            callback(rawFile.responseText);
+                        }
+                    }
+                    rawFile.send(null);
+                };
+                function buildrollwindow() {
+                    readTextFile("content/rolls.json", function (text) {
+                        let data = JSON.parse(text);
+                        data.forEach(function (element) {
+                            let prcard = document.createElement("div");
+                            prcard.className = "col-md-4";
+                            prcard.id = "rcard" + element.number;
+                            let prcardshadow = document.createElement("div");
+                            prcardshadow.className = "card mb-4 shadow-sm";
+                            prcardshadow.id = "rcardshadow" + element.number;
+                            let prcardimg = document.createElement("img");
+                            prcardimg.className = "bd-placeholder-img card-img-top";
+                            prcardimg.src = "images/products/roll/" + element.number + ".png";
+                            prcardimg.id = "rcardimg" + element.number;
+                            let prcardbody = document.createElement("div");
+                            prcardbody.id = "rcardbody" + element.number;
+                            prcardbody.className = "cardbody";
+                            prcardbody.padding = "10px";
+                            let pcardbody = document.createElement("h4");
+                            pcardbody.className = "productheader text-muted alert alert-warning";
+                            pcardbody.innerText = (element.name).charAt(0).toUpperCase() + (element.name).substr(1);
+                            let prflex = document.createElement("div");
+                            prflex.className = "d-flex justify-content-between align-items-center";
+                            prflex.id = "rflex" + element.number;
+                            let prbtngroup = document.createElement("div");
+                            prbtngroup.className = "btn-group";
+                            prbtngroup.id = "rbtngroup" + element.number;
+                            let orderbutton = document.createElement("button");
+                            orderbutton.className = "btn btn-secondary";
+                            orderbutton.type = "button";
+                            orderbutton.id = "orderbutton" + element.number;
+                            orderbutton.innerText = "Заказать";
+                            AddListner(orderbutton, AddToOrder, element.number);
+                            let infobutton = document.createElement("button");
+                            infobutton.className = "btn btn-secondary";
+                            infobutton.type = "button";
+                            infobutton.id = "infobutton" + element.number;
+                            infobutton.dataset.toggle = "modal";
+                            infobutton.dataset.target = "#infoModal";
+                            AddListner(infobutton, rollModal, element.name);
+                            AddListner(infobutton, rollinfo, element.ingredient);
+                            infobutton.innerText = "Инфо";
+                            let priceval = document.createElement("h5");
+                            priceval.className = "text-muted alert alert-danger";
+                            priceval.id = "rpriceval" + element.number;
+                            priceval.innerText = element.price + ' руб';
+                            document.getElementById("rollcards").appendChild(prcard);
+                            document.getElementById("rcard" + element.number).appendChild(prcardshadow);
+                            document.getElementById("rcardshadow" + element.number).appendChild(prcardimg);
+                            document.getElementById("rcardshadow" + element.number).appendChild(prcardbody);
+                            document.getElementById("rcardbody" + element.number).appendChild(pcardbody);
+                            document.getElementById("rcardbody" + element.number).appendChild(prflex);
+                            document.getElementById("rflex" + element.number).appendChild(prbtngroup);
+                            document.getElementById("rbtngroup" + element.number).appendChild(orderbutton);
+                            document.getElementById("rbtngroup" + element.number).appendChild(infobutton);
+                            document.getElementById("rflex" + element.number).appendChild(priceval);
+                        });
+                    });
                 }
-            }
-            rawFile.send(null);
-        }
-        //usage:
-        readTextFile("content/convertcsv.json", function(text){
-            let data = JSON.parse(text);
-            data.forEach(function(element) {
-               let prcard= document.createElement("div");
-               prcard.className="col-md-4";
-               prcard.id="prcard"+element.number;
-               let prcardshadow=document.createElement("div");
-                prcardshadow.className="card mb-4 shadow-sm";
-                prcardshadow.id="prcardshadow"+element.number;
-                let prcardimg=document.createElement("img");
-                prcardimg.className="bd-placeholder-img card-img-top";
-                prcardimg.src="images/products/"+element.number+".png";
-                prcardimg.id="prcardimg"+element.number;
-                let prcardbody=document.createElement("div");
-                prcardbody.id="prcardbody"+element.number;
-                prcardbody.className="cardbody";
-                prcardbody.padding="10px";
-                let pcardbody=document.createElement("h4");
-                pcardbody.className="text-muted alert alert-warning";
-                pcardbody.innerText=(element.name).charAt(0).toUpperCase() + (element.name).substr(1);
-                let prflex=document.createElement("div");
-                prflex.className="d-flex justify-content-between align-items-center";
-                prflex.id="prflex"+element.number;
-                let prbtngroup=document.createElement("div");
-                prbtngroup.className="btn-group";
-                prbtngroup.id="prbtngroup"+element.number;
-                let orderbutton=document.createElement("button");
-                orderbutton.className="btn btn-secondary";
-                orderbutton.type="button";
-                orderbutton.id="orderbutton"+element.number;
-                orderbutton.innerText="Заказать";
-                let infobutton=document.createElement("button");
-                infobutton.className="btn btn-secondary";
-                infobutton.type="button";
-                infobutton.id="infobutton"+element.number;
-                infobutton.innerText="Инфо";
-                let priceval=document.createElement("h5");
-                priceval.className="text-muted alert alert-danger";
-                priceval.id="priceval"+element.number;
-                priceval.innerText=element.price+' руб';
-                document.getElementById("productcards").appendChild(prcard);
-                document.getElementById("prcard"+element.number).appendChild(prcardshadow);
-                document.getElementById("prcardshadow"+element.number).appendChild(prcardimg);
-                document.getElementById("prcardshadow"+element.number).appendChild(prcardbody);
-                document.getElementById("prcardbody"+element.number).appendChild(pcardbody);
-                document.getElementById("prcardbody"+element.number).appendChild(prflex);
-                document.getElementById("prflex"+element.number).appendChild(prbtngroup);
-                document.getElementById("prbtngroup"+element.number).appendChild(orderbutton);
-                document.getElementById("prbtngroup"+element.number).appendChild(infobutton);
-                document.getElementById("prflex"+element.number).appendChild(priceval);
-            });
-        });
-    </script>
-<!--    Витрина-->
-    <div class="album py-5 bg-light">
-        <div class="container">
-            <div id="productcards" class="row">
+                function buildsetwindow() {
+                    readTextFile("content/set.json", function (text) {
+                        let data = JSON.parse(text);
+                        data.forEach(function (element) {
+                            let prcard = document.createElement("div");
+                            prcard.className = "col-md-4";
+                            prcard.id = "scard" + element.number;
+                            let prcardshadow = document.createElement("div");
+                            prcardshadow.className = "card mb-4 shadow-sm";
+                            prcardshadow.id = "scardshadow" + element.number;
+                            let prcardimg = document.createElement("img");
+                            prcardimg.className = "bd-placeholder-img card-img-top";
+                            prcardimg.src = "images/products/set/" + element.number + ".png";
+                            prcardimg.id = "scardimg" + element.number;
+                            let prcardbody = document.createElement("div");
+                            prcardbody.id = "scardbody" + element.number;
+                            prcardbody.className = "cardbody";
+                            prcardbody.padding = "10px";
+                            let pcardbody = document.createElement("h4");
+                            pcardbody.className = "productheader text-muted alert alert-warning";
+                            pcardbody.innerText = (element.name).charAt(0).toUpperCase() + (element.name).substr(1);
+                            let prflex = document.createElement("div");
+                            prflex.className = "d-flex justify-content-between align-items-center";
+                            prflex.id = "sflex" + element.number;
+                            let prbtngroup = document.createElement("div");
+                            prbtngroup.className = "btn-group";
+                            prbtngroup.id = "sbtngroup" + element.number;
+                            let orderbutton = document.createElement("button");
+                            orderbutton.className = "btn btn-secondary";
+                            orderbutton.type = "button";
+                            orderbutton.id = "orderbutton" + element.number;
+                            orderbutton.innerText = "Заказать";
+                            AddListner(orderbutton, AddToOrder, element.number);
+                            let infobutton = document.createElement("button");
+                            infobutton.className = "btn btn-secondary";
+                            infobutton.type = "button";
+                            infobutton.id = "infobutton" + element.number;
+                            infobutton.dataset.toggle = "modal";
+                            infobutton.dataset.target = "#infoModal";
+                            AddListner(infobutton, setModal, element.name);
+                            AddListner(infobutton, setinfo, element.number);
+                            infobutton.innerText = "Инфо";
+                            let priceval = document.createElement("h5");
+                            priceval.className = "text-muted alert alert-danger";
+                            priceval.id = "spriceval" + element.number;
+                            priceval.innerText = element.price + ' руб';
+                            document.getElementById("setcards").appendChild(prcard);
+                            document.getElementById("scard" + element.number).appendChild(prcardshadow);
+                            document.getElementById("scardshadow" + element.number).appendChild(prcardimg);
+                            document.getElementById("scardshadow" + element.number).appendChild(prcardbody);
+                            document.getElementById("scardbody" + element.number).appendChild(pcardbody);
+                            document.getElementById("scardbody" + element.number).appendChild(prflex);
+                            document.getElementById("sflex" + element.number).appendChild(prbtngroup);
+                            document.getElementById("sbtngroup" + element.number).appendChild(orderbutton);
+                            document.getElementById("sbtngroup" + element.number).appendChild(infobutton);
+                            document.getElementById("sflex" + element.number).appendChild(priceval);
+                        });
+                    });
+                }
+                function buildmiscwindow() {
+                    readTextFile("content/misc.json", function (text) {
+                        let data = JSON.parse(text);
+                        data.forEach(function (element) {
+                            let prcard = document.createElement("div");
+                            prcard.className = "col-md-4";
+                            prcard.id = "mcard" + element.number;
+                            let prcardshadow = document.createElement("div");
+                            prcardshadow.className = "card mb-4 shadow-sm";
+                            prcardshadow.id = "prcardshadow" + element.number;
+                            let prcardimg = document.createElement("img");
+                            prcardimg.className = "bd-placeholder-img card-img-top";
+                            prcardimg.src = "images/products/misc/" + element.number + ".png";
+                            prcardimg.id = "prcardimg" + element.number;
+                            let prcardbody = document.createElement("div");
+                            prcardbody.id = "prcardbody" + element.number;
+                            prcardbody.className = "cardbody";
+                            prcardbody.padding = "10px";
+                            let pcardbody = document.createElement("h4");
+                            pcardbody.className = " text-muted alert alert-warning";
+                            pcardbody.innerText = (element.name).charAt(0).toUpperCase() + (element.name).substr(1);
+                            let prflex = document.createElement("div");
+                            prflex.className = "d-flex justify-content-between align-items-center";
+                            prflex.id = "prflex" + element.number;
+                            let prbtngroup = document.createElement("div");
+                            prbtngroup.className = "btn-group";
+                            prbtngroup.id = "prbtngroup" + element.number;
+                            let orderbutton = document.createElement("button");
+                            orderbutton.className = "btn btn-secondary";
+                            orderbutton.type = "button";
+                            orderbutton.id = "orderbutton" + element.number;
+                            orderbutton.innerText = "Заказать";
+                            AddListner(orderbutton, AddToOrder, element.name);
+                            let priceval = document.createElement("h5");
+                            priceval.className = "text-muted alert alert-danger";
+                            priceval.id = "priceval" + element.number;
+                            priceval.innerText = element.price + ' руб';
+                            document.getElementById("misccards").appendChild(prcard);
+                            document.getElementById("mcard" + element.number).appendChild(prcardshadow);
+                            document.getElementById("prcardshadow" + element.number).appendChild(prcardimg);
+                            document.getElementById("prcardshadow" + element.number).appendChild(prcardbody);
+                            document.getElementById("prcardbody" + element.number).appendChild(pcardbody);
+                            document.getElementById("prcardbody" + element.number).appendChild(prflex);
+                            document.getElementById("prflex" + element.number).appendChild(prbtngroup);
+                            document.getElementById("prbtngroup" + element.number).appendChild(orderbutton);
+                            document.getElementById("prflex" + element.number).appendChild(priceval);
+                        });
+                    });
+                }
+                function rollinfo(info) {
+                    document.getElementById('infodata').innerHTML = (info).charAt(0).toUpperCase() + (info).substr(1);
+                }
+                function rollModal(name) {
 
-    </div>
-        </div>
-    </div>
+                    document.getElementById("infoModalLabel").innerHTML = (name).charAt(0).toUpperCase() + (name).substr(1);
+                    document.getElementById('infofield').innerHTML = "Ингредиенты";
+                }
+                function setinfo(id) {
+                    document.getElementById('infodata').innerHTML = "";
+                    readTextFile("content/setcontent.json", function (text) {
+
+                        let data = JSON.parse(text);
+                        data.forEach(function (element) {
+                            if (id == element.number) {
+
+                                document.getElementById('infodata').innerHTML += (element.name).charAt(0).toUpperCase() + (element.name).substr(1) + " ......... " + element.count + "<BR>";
+                            }
+                        });
+                    });
+                }
+                function setModal(name) {
+
+                    document.getElementById("infoModalLabel").innerHTML = (name).charAt(0).toUpperCase() + (name).substr(1);
+                    document.getElementById('infofield').innerHTML = "Состав";
+                }
+                function buildall() {
+                    buildrollwindow();
+                    buildsetwindow();
+                    buildmiscwindow();
+                }
+                function AddListner(element, func, params) {
+                    element.addEventListener('click', func.bind(null, params));
+                }
+                function AddToOrder(id) {
+                    let order = new Order(id);
+                    myorder.orders.add(order);
+                    document.getElementById("ordercount").innerHTML = myorder.orders.size;
+
+                }
+
+                focusMethod = function getFocus() {
+                    if (myorder.orders.size == 0) {
+                        document.getElementById("myButton").style.visibility == false;
+                        alert("Вы ничего не добавили в заказ!");
+                    }
+                    else {
+                        document.getElementById("myButton").style.visibility == true;
+                        document.getElementById("myButton").focus();
+                    }
+                }
+                function filterall() {
+                    clearall();
+                    buildall();
+                }
+                function filterroll() {
+                    clearall();
+                    buildrollwindow();
+                }
+                function filterset() {
+                    clearall();
+                    buildsetwindow();
+                }
+                function filtermisc() {
+                    clearall();
+                    buildmiscwindow();
+                }
+                function clearall() {
+                    let pagenode = document.getElementById("rollcards");
+                    while (pagenode.firstChild) {
+                        pagenode.removeChild(pagenode.firstChild);
+                    }
+                    var pagenode1 = document.getElementById("setcards");
+                    while (pagenode1.firstChild) {
+                        pagenode1.removeChild(pagenode1.firstChild);
+                    }
+                    var pagenode2 = document.getElementById("misccards");
+                    while (pagenode2.firstChild) {
+                        pagenode2.removeChild(pagenode2.firstChild);
+                    }
+                }
+                window.addEventListener("load", buildall);
+
+            </script>
+            <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="infoModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h6 id="infofield"></h6>
+                            <p id="infodata"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть.</button>
+                            <button id="modalorderbutton" type="button" class="btn btn-primary">Добавить в заказ.</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--    Витрина-->
+            <div class="windowwrapper container-fluid">
+                <div class="row">
+                    <div class="col bgsideleft">
+
+                    </div>
+                    <div class="col-6" id="productwindow">
+                       
+                            <div class="album py-5 bg-light">
+                                <div class="container">
+                                    <h1 class="halbum" align="center">Роллы</h1>
+                                    <div id="rollcards" class="row">
+
+                                    </div>
+                                    <h1 class="halbum"  align="center">Сеты</h1>
+                                    <div id="setcards" class="row">
+
+                                    </div>
+                                    <h1 class="halbum" align="center">Дополнительно</h1>
+                                    <div id="misccards" class="row">
+
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col bgsideright" >
+
+                    </div>
+                </div>
+            </div>
+                    <div class="collapse" id="collapsecart">
+                        <div id="cartview" class="card card-body">
+                            <table border="1">
+                                <caption>Мой заказ</caption>
+                                <tr>
+                                    <th>Название</th>
+                                    <th>Количество</th>
+                                    <th>Цена</th>
+                                </tr>
+                                <tr><td>Суши</td><td>2</td><td>360</td>
+                            </table>
+                        </div>
+
+                        <p></p>
+
+                    </div>
+                    <button type="button" id="myButton">Заказать!</button>
 </section>
-<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
-    <div class="container text-center">
-        <strong>2019&copy; СушиЛайк22</strong>
-        <hr>
+    <p id="myTextField"></p>
+    <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <strong>2019&copy; СушиЛайк22</strong>
+            <hr>
 
-        <small>Разработка сайта Feziko</small>
-    </div>
-</footer>
+            <small>Разработка сайта Feziko</small>
+        </div>
+    </footer>
 
 </body>
 </html>

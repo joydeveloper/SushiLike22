@@ -1,0 +1,492 @@
+[
+  {
+    "number": 1,
+    "name": "Филадельфия",
+    "count": 12
+  },
+  {
+    "number": 1,
+    "name": "Монтерей",
+    "count": 4
+  },
+  {
+    "number": 1,
+    "name": "Васабико",
+    "count": 4
+  },
+  {
+    "number": 1,
+    "name": "президент",
+    "count": 4
+  },
+  {
+    "number": 1,
+    "name": "лава",
+    "count": 8
+  },
+  {
+    "number": 1,
+    "name": "санрайз",
+    "count": 4
+  },
+  {
+    "number": 1,
+    "name": "калифорния",
+    "count": 4
+  },
+  {
+    "number": 1,
+    "name": "юкатан",
+    "count": 8
+  },
+  {
+    "number": 1,
+    "name": "восходящее солнце",
+    "count": 4
+  },
+  {
+    "number": 1,
+    "name": "гейша",
+    "count": 4
+  },
+  {
+    "number": 1,
+    "name": "унаги филадельфия",
+    "count": 8
+  },
+  {
+    "number": 1,
+    "name": "бермуды",
+    "count": 4
+  },
+  {
+    "number": 1,
+    "name": "чикен чиз",
+    "count": 4
+  },
+  {
+    "number": 2,
+    "name": "филадельфия",
+    "count": 8
+  },
+  {
+    "number": 2,
+    "name": "санрайз",
+    "count": 8
+  },
+  {
+    "number": 2,
+    "name": "бостон",
+    "count": 8
+  },
+  {
+    "number": 2,
+    "name": "такеши",
+    "count": 8
+  },
+  {
+    "number": 2,
+    "name": "юкатан",
+    "count": 8
+  },
+  {
+    "number": 2,
+    "name": "калифорния крим",
+    "count": 8
+  },
+  {
+    "number": 2,
+    "name": "черный самурай",
+    "count": 4
+  },
+  {
+    "number": 2,
+    "name": "васабико",
+    "count": 4
+  },
+  {
+    "number": 3,
+    "name": "филадельфия",
+    "count": 8
+  },
+  {
+    "number": 3,
+    "name": "лава",
+    "count": 8
+  },
+  {
+    "number": 3,
+    "name": "юкатан",
+    "count": 8
+  },
+  {
+    "number": 3,
+    "name": "восходящее солнце",
+    "count": 4
+  },
+  {
+    "number": 3,
+    "name": "монтерей",
+    "count": 4
+  },
+  {
+    "number": 3,
+    "name": "васабико",
+    "count": 4
+  },
+  {
+    "number": 3,
+    "name": "унаги филадельфия",
+    "count": 4
+  },
+  {
+    "number": 3,
+    "name": "калифорния",
+    "count": 4
+  },
+  {
+    "number": 4,
+    "name": "восходящее солнце",
+    "count": 4
+  },
+  {
+    "number": 4,
+    "name": "президент",
+    "count": 8
+  },
+  {
+    "number": 4,
+    "name": "юкатан",
+    "count": 8
+  },
+  {
+    "number": 4,
+    "name": "сяке маки",
+    "count": 4
+  },
+  {
+    "number": 4,
+    "name": "унаги футомаки",
+    "count": 4
+  },
+  {
+    "number": 4,
+    "name": "лава",
+    "count": 4
+  },
+  {
+    "number": 4,
+    "name": "филадельфия",
+    "count": 4
+  },
+  {
+    "number": 4,
+    "name": "мак",
+    "count": 4
+  },
+  {
+    "number": 4,
+    "name": "бостон",
+    "count": 4
+  },
+  {
+    "number": 5,
+    "name": "калифорния",
+    "count": 4
+  },
+  {
+    "number": 5,
+    "name": "президент",
+    "count": 8
+  },
+  {
+    "number": 5,
+    "name": "юкатан",
+    "count": 8
+  },
+  {
+    "number": 5,
+    "name": "сяке маки",
+    "count": 8
+  },
+  {
+    "number": 5,
+    "name": "ролл грин",
+    "count": 4
+  },
+  {
+    "number": 5,
+    "name": "бермуды",
+    "count": 4
+  },
+  {
+    "number": 5,
+    "name": "лава",
+    "count": 8
+  },
+  {
+    "number": 5,
+    "name": "филадельфия",
+    "count": 4
+  },
+  {
+    "number": 5,
+    "name": "мак",
+    "count": 8
+  },
+  {
+    "number": 6,
+    "name": "неизвестно",
+    "count": 1
+  },
+  {
+    "number": 7,
+    "name": "филадельфия",
+    "count": 4
+  },
+  {
+    "number": 7,
+    "name": "бостон",
+    "count": 4
+  },
+  {
+    "number": 7,
+    "name": "бермуды",
+    "count": 4
+  },
+  {
+    "number": 7,
+    "name": "чикен чиз",
+    "count": 4
+  },
+  {
+    "number": 7,
+    "name": "санрайз",
+    "count": 4
+  },
+  {
+    "number": 7,
+    "name": "лава",
+    "count": 4
+  },
+  {
+    "number": 7,
+    "name": "монтерей",
+    "count": 4
+  },
+  {
+    "number": 7,
+    "name": "калифорния",
+    "count": 4
+  },
+  {
+    "number": 8,
+    "name": "такеши",
+    "count": 4
+  },
+  {
+    "number": 8,
+    "name": "бостон",
+    "count": 4
+  },
+  {
+    "number": 8,
+    "name": "калифорния крим",
+    "count": 4
+  },
+  {
+    "number": 8,
+    "name": "унаги филадельфия",
+    "count": 4
+  },
+  {
+    "number": 8,
+    "name": "филадельфия",
+    "count": 8
+  },
+  {
+    "number": 9,
+    "name": "филадельфия",
+    "count": 4
+  },
+  {
+    "number": 9,
+    "name": "бостон",
+    "count": 4
+  },
+  {
+    "number": 9,
+    "name": "бермуды",
+    "count": 4
+  },
+  {
+    "number": 9,
+    "name": "восходящее солнце",
+    "count": 4
+  },
+  {
+    "number": 9,
+    "name": "черный самурай",
+    "count": 4
+  },
+  {
+    "number": 9,
+    "name": "гейша",
+    "count": 4
+  },
+  {
+    "number": 9,
+    "name": "монтерей",
+    "count": 4
+  },
+  {
+    "number": 9,
+    "name": "калифорния",
+    "count": 4
+  },
+  {
+    "number": 10,
+    "name": "филадельфия",
+    "count": 4
+  },
+  {
+    "number": 10,
+    "name": "юкатан",
+    "count": 8
+  },
+  {
+    "number": 10,
+    "name": "бермуды",
+    "count": 4
+  },
+  {
+    "number": 10,
+    "name": "президент",
+    "count": 8
+  },
+  {
+    "number": 10,
+    "name": "мак",
+    "count": 4
+  },
+  {
+    "number": 11,
+    "name": "филадельфия",
+    "count": 4
+  },
+  {
+    "number": 11,
+    "name": "унаги филадельфия",
+    "count": 4
+  },
+  {
+    "number": 11,
+    "name": "лава",
+    "count": 4
+  },
+  {
+    "number": 11,
+    "name": "филадельфия крим",
+    "count": 4
+  },
+  {
+    "number": 11,
+    "name": "калифорния",
+    "count": 4
+  },
+  {
+    "number": 12,
+    "name": "калифорния",
+    "count": 4
+  },
+  {
+    "number": 12,
+    "name": "президент",
+    "count": 4
+  },
+  {
+    "number": 12,
+    "name": "юкатан",
+    "count": 8
+  },
+  {
+    "number": 12,
+    "name": "сяке маки",
+    "count": 4
+  },
+  {
+    "number": 12,
+    "name": "унаги футомаки",
+    "count": 4
+  },
+  {
+    "number": 12,
+    "name": "лава",
+    "count": 8
+  },
+  {
+    "number": 12,
+    "name": "филадельфия",
+    "count": 4
+  },
+  {
+    "number": 13,
+    "name": "ролл грин",
+    "count": 4
+  },
+  {
+    "number": 13,
+    "name": "калифорния",
+    "count": 4
+  },
+  {
+    "number": 13,
+    "name": "лава",
+    "count": 8
+  },
+  {
+    "number": 13,
+    "name": "президент",
+    "count": 4
+  },
+  {
+    "number": 13,
+    "name": "унаги футомаки",
+    "count": 2
+  },
+  {
+    "number": 13,
+    "name": "филадельфия",
+    "count": 4
+  },
+  {
+    "number": 13,
+    "name": "юкатан",
+    "count": 4
+  },
+  {
+    "number": 14,
+    "name": "бермуды",
+    "count": 8
+  },
+  {
+    "number": 14,
+    "name": "юкатан",
+    "count": 8
+  },
+  {
+    "number": 14,
+    "name": "лава",
+    "count": 8
+  },
+  {
+    "number": 14,
+    "name": "президент",
+    "count": 8
+  },
+  {
+    "number": 14,
+    "name": "сяке маки",
+    "count": 4
+  }
+]

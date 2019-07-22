@@ -1,0 +1,72 @@
+[
+ {
+   "number": 1,
+   "name": "гранд пати",
+   "price": 1899
+ },
+ {
+   "number": 2,
+   "name": "биг компани",
+   "price": 1399
+ },
+ {
+   "number": 3,
+   "name": "дуэт",
+   "price": 1099
+ },
+ {
+   "number": 4,
+   "name": "тета",
+   "price": 849
+ },
+ {
+   "number": 5,
+   "name": "бета",
+   "price": 849
+ },
+ {
+   "number": 6,
+   "name": "горячий",
+   "price": 999
+ },
+ {
+   "number": 7,
+   "name": "прайм",
+   "price": 699
+ },
+ {
+   "number": 8,
+   "name": "дабл",
+   "price": 699
+ },
+ {
+   "number": 9,
+   "name": "красное и черное",
+   "price": 699
+ },
+ {
+   "number": 10,
+   "name": "веста",
+   "price": 615
+ },
+ {
+   "number": 11,
+   "name": "де люкс",
+   "price": 589
+ },
+ {
+   "number": 12,
+   "name": "омега",
+   "price": 549
+ },
+ {
+   "number": 13,
+   "name": "I лава you",
+   "price": 549
+ },
+ {
+   "number": 14,
+   "name": "альфа",
+   "price": 499
+ }
+]
